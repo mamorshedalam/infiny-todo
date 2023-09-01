@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply flex justify-between items-center w-full gap-4 px-9 py-3 bg-zinc-900;
+  }
+  .headerLogo {
+    @apply h-10;
+  }
+  .headerSocial {
+    @apply h-6 opacity-50 hover:opacity-80 transition-all duration-700 ease-in-out;
+  }
+
+  .hero {
+    @apply text-center mt-10 mb-20;
+  }
+  .hero h1 {
+    @apply text-4xl font-bold tracking-wider;
+  }
+  .hero span {
+    @apply text-red-500;
+  }
+  .hero p {
+    @apply opacity-70;
+  }
+
+  .main {
+    @apply flex flex-wrap;
+  }
+
+  .main h2 {
+    @apply flex justify-between items-center text-lg uppercase font-medium tracking-wider border-b border-zinc-600 py-2 mb-6;
+  }
+
+  .formDiv {
+    @apply w-2/5 p-6;
+  }
+  .formDiv form {
+    @apply w-full flex flex-wrap justify-between items-center;
+  }
+  .formDiv input {
+    @apply rounded border border-zinc-600 bg-zinc-900 py-2 px-3 w-2/5 mb-4;
+  }
+  .formDiv input[type="text"] {
+    @apply w-full;
+  }
+  .formDiv input[type="submit"] {
+    @apply bg-zinc-700 cursor-pointer hover:bg-zinc-950 transition-colors duration-700 ease-in-out;
+  }
+
+  .listDiv {
+    @apply w-3/5 p-6;
+  }
+  .listItems {
+    @apply h-[45vh] overflow-y-scroll;
+  }
+  .listItems li {
+    @apply flex items-center text-zinc-300 rounded even:bg-zinc-800 odd:bg-zinc-900 py-2 px-3 mb-3 hover:even:bg-zinc-800/75 hover:odd:bg-zinc-900/75;
+  }
+  .listItems label,
+  .listItems input {
+    @apply cursor-pointer mx-2;
+  }
+  .listItems p {
+    @apply text-zinc-100;
+  }
+  .listItems button {
+    @apply ml-auto;
+  }
+
+  .footer {
+    @apply text-center text-sm opacity-75 absolute bottom-0 w-full py-5;
+  }
+  .footer a {
+    @apply text-red-500 italic;
+  }
+
+  .warning {
+    @apply absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 bg-zinc-700 py-5 px-7 rounded text-xl font-medium text-center;
+  }
+  .warning div {
+    @apply flex justify-between items-center mt-5;
+  }
+  .warning button:last-child {
+    @apply bg-green-500 hover:bg-green-600 transition-colors duration-700 ease-in-out;
+  }
+}
+
+@layer base {
+  /* RESET DEFAULT */
+  body {
+    @apply relative h-screen overflow-hidden bg-zinc-950 text-zinc-50;
+  }
+
+  a,
+  button {
+    @apply inline-block cursor-pointer;
+  }
+
+  button {
+    @apply bg-red-500 py-px px-2 rounded-md text-sm uppercase hover:bg-red-600 transition-colors duration-700 ease-in-out;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply outline-none bg-transparent;
+  }
+
+  img {
+    @apply w-full h-full object-cover;
+  }
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+  }
+
+  body::-webkit-scrollbar,
+  .listItems::-webkit-scrollbar {
+    display: none;
+  }
+}
