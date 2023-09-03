@@ -4,20 +4,20 @@
 
 @layer components {
   .header {
-    @apply flex justify-between items-center w-full gap-4 px-9 py-3 bg-zinc-900;
+    @apply flex justify-between items-center w-full gap-4 md:px-9 px-6 py-3 bg-zinc-900;
   }
   .headerLogo {
-    @apply h-10;
+    @apply md:h-10 h-8;
   }
   .headerSocial {
     @apply h-6 opacity-50 hover:opacity-80 transition-all duration-700 ease-in-out;
   }
 
   .hero {
-    @apply text-center mt-10 mb-20;
+    @apply text-center md:mt-10 mt-5 md:mb-20 mb-10;
   }
   .hero h1 {
-    @apply text-4xl font-bold tracking-wider;
+    @apply md:text-4xl text-3xl font-bold tracking-wider;
   }
   .hero span {
     @apply text-red-500;
@@ -31,11 +31,11 @@
   }
 
   .main h2 {
-    @apply flex justify-between items-center text-lg uppercase font-medium tracking-wider border-b border-zinc-600 py-2 mb-6;
+    @apply flex justify-between items-center md:text-lg text-base uppercase font-medium tracking-wider border-b border-zinc-600 py-2 md:mb-6 mb-4;
   }
 
   .formDiv {
-    @apply w-2/5 p-6;
+    @apply md:w-2/5 w-full md:p-6 p-4;
   }
   .formDiv form {
     @apply w-full flex flex-wrap justify-between items-center;
@@ -51,7 +51,7 @@
   }
 
   .listDiv {
-    @apply w-3/5 p-6;
+    @apply md:w-3/5 w-full md:p-6 p-4;
   }
   .listItems {
     @apply h-[45vh] overflow-y-scroll;
@@ -71,7 +71,7 @@
   }
 
   .footer {
-    @apply text-center text-sm opacity-75 absolute bottom-0 w-full py-5;
+    @apply md:absolute text-center text-sm opacity-75 bottom-0 w-full py-5;
   }
   .footer a {
     @apply text-red-500 italic;
@@ -91,7 +91,7 @@
 @layer base {
   /* RESET DEFAULT */
   body {
-    @apply relative h-screen overflow-hidden bg-zinc-950 text-zinc-50;
+    @apply relative h-screen overflow-hidden bg-zinc-950 text-zinc-50 md:text-base text-sm;
   }
 
   a,
