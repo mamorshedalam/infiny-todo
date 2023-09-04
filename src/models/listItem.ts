@@ -1,7 +1,7 @@
 export interface Item {
   id: string;
   text: string;
-  time: number;
+  time: string;
   checked: boolean;
 }
 
@@ -9,7 +9,7 @@ export default class ListItem implements Item {
   constructor(
     private _id: string = "",
     private _text: string = "",
-    private _time: number = 0,
+    private _time: string = "",
     private _checked: boolean = false
   ) {}
 
@@ -27,10 +27,10 @@ export default class ListItem implements Item {
     this._text = text;
   }
 
-  get time(): number {
+  get time(): string {
     return this._time;
   }
-  set time(time: number) {
+  set time(time: string) {
     this._time = time;
   }
 

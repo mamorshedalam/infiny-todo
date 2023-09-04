@@ -78,7 +78,7 @@
   }
 
   .warning {
-    @apply absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 bg-zinc-700 py-5 px-7 rounded text-xl font-medium text-center;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 bg-zinc-700 py-5 px-7 rounded text-xl font-medium text-center;
   }
   .warning div {
     @apply flex justify-between items-center mt-5;

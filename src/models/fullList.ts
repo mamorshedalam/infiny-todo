@@ -26,7 +26,7 @@ export default class FullList implements List {
     const parsedList: {
       _id: string;
       _text: string;
-      _time: number;
+      _time: string;
       _checked: boolean;
     }[] = JSON.parse(storedList);
 

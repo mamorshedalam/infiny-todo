@@ -21,14 +21,14 @@
   <main class="main">
     <div class="formDiv">
       <h2>Add Task:</h2>
-      <form>
-        <input type="text" id="" placeholder="what you have to list...">
-        <input type="time" id="">
+      <form id="itemForm">
+        <input type="text" id="itemText" placeholder="what you have to list..." required>
+        <input type="time" id="itemTime" required>
         <input type="submit" id="" value="Add">
       </form>
     </div>
     <div class="listDiv">
-      <h2>List: <button>clear</button></h2>
+      <h2>List: <button id="clearButton">clear</button></h2>
       <ul id="listItems" class="listItems">
         <!-- <li><span class="">1.</span><input id="1" type="checkbox"><label for="1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
           <p>@ 10.30</p><button>x</button>
@@ -41,7 +41,7 @@
     <p>built with TypeScript</p>
   </footer>
 
-  <div class="warning">
+  <div id="warning" style="display: none;" class="warning">
     <p>Are sure to clear all Task?</p>
     <div>
       <button>Yes</button>
