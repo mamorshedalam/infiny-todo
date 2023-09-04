@@ -6,7 +6,7 @@ interface List {
   save(): void;
   clear(): void;
   add(itemObj: ListItem): void;
-  remove(id: string | number): void;
+  remove(id: string): void;
 }
 
 export default class FullList implements List {
@@ -24,8 +24,8 @@ export default class FullList implements List {
     if (storedList !== "string") return;
 
     const parsedList: {
-      _id: string | number;
-      _name: string;
+      _id: string;
+      _text: string;
       _time: number;
       _checked: boolean;
     }[] = JSON.parse(storedList);
@@ -33,7 +33,7 @@ export default class FullList implements List {
     parsedList.forEach((itemObj) => {
       const newItemObj = new ListItem(
         itemObj._id,
-        itemObj._name,
+        itemObj._text,
         itemObj._time,
         itemObj._checked
       );
@@ -56,7 +56,7 @@ export default class FullList implements List {
     this.save();
   }
 
-  remove(id: string | number): void {
+  remove(id: string): void {
     this._list = this._list.filter((item) => item.id !== id);
     this.save();
   }

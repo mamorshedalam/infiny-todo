@@ -1,30 +1,30 @@
 export interface Item {
-  id: string | number;
-  name: string;
+  id: string;
+  text: string;
   time: number;
   checked: boolean;
 }
 
 export default class ListItem implements Item {
   constructor(
-    private _id: string | number = "",
-    private _name: string = "",
+    private _id: string = "",
+    private _text: string = "",
     private _time: number = 0,
     private _checked: boolean = false
   ) {}
 
-  get id(): string | number {
+  get id(): string {
     return this._id;
   }
-  set id(id: string | number) {
+  set id(id: string) {
     this._id = id;
   }
 
-  get name(): string {
-    return this._name;
+  get text(): string {
+    return this._text;
   }
-  set name(name: string) {
-    this._name = name;
+  set text(text: string) {
+    this._text = text;
   }
 
   get time(): number {
